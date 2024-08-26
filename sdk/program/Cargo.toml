@@ -45,7 +45,8 @@ thiserror = { workspace = true }
 # Remove this once borsh 0.11 or 1.0 is released, which correctly declares the
 # hashbrown dependency as optional.
 [target.'cfg(target_os = "solana")'.dependencies]
-getrandom = { workspace = true, features = ["custom"] }
+# getrandom = { workspace = true, features = ["custom"] }
+getrandom = { path = "/home/rigidus/src/getrandom", features = ["js"] }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]
 ark-bn254 = { workspace = true }
@@ -62,7 +63,7 @@ light-poseidon = { workspace = true }
 num-bigint = { workspace = true }
 rand = { workspace = true }
 tiny-bip39 = { workspace = true }
-wasm-bindgen = { workspace = true }
+# wasm-bindgen = { workspace = true }
 zeroize = { workspace = true, features = ["default", "zeroize_derive"] }
 
 [target.'cfg(not(target_os = "solana"))'.dev-dependencies]
@@ -70,10 +71,12 @@ arbitrary = { workspace = true, features = ["derive"] }
 solana-logger = { workspace = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-console_error_panic_hook = { workspace = true }
-console_log = { workspace = true }
-getrandom = { workspace = true, features = ["js", "wasm-bindgen"] }
-js-sys = { workspace = true }
+# console_error_panic_hook = { workspace = true }
+# console_error_panic_hook = { path = "/home/rigidus/src/console_error_panic_hook" }
+# console_log = { workspace = true }
+# getrandom = { workspace = true, features = ["js", "wasm-bindgen"] }
+# getrandom = { path = "/home/rigidus/src/getrandom", features = ["js"] }
+# js-sys = { workspace = true }
 
 [target.'cfg(not(target_pointer_width = "64"))'.dependencies]
 parking_lot = { workspace = true }

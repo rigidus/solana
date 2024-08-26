@@ -1248,26 +1248,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "console_error_panic_hook"
-version = "0.1.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
-dependencies = [
- "cfg-if 1.0.0",
- "wasm-bindgen",
-]
-
-[[package]]
-name = "console_log"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e89f72f65e8501878b8a004d5a1afb780987e2ce2b4532c562e367a72c57499f"
-dependencies = [
- "log",
- "web-sys",
-]
-
-[[package]]
 name = "const_format"
 version = "0.2.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2225,10 +2205,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be4136b2a15dd319360be1c07d9933517ccf0be8f16bf62a3bee4f0d618df427"
 dependencies = [
  "cfg-if 1.0.0",
- "js-sys",
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
- "wasm-bindgen",
+]
+
+[[package]]
+name = "getrandom"
+version = "0.2.15"
+dependencies = [
+ "cfg-if 1.0.0",
+ "libc",
+ "wasi 0.11.0+wasi-snapshot-preview1",
+ "windows-targets 0.52.0",
 ]
 
 [[package]]
@@ -2919,9 +2907,9 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 
 [[package]]
 name = "libc"
-version = "0.2.153"
+version = "0.2.158"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
+checksum = "d8adc4bb1803a324070e64a98ae98f38934d91957a99cfb3a43dcbc01bc56439"
 
 [[package]]
 name = "libloading"
@@ -6560,12 +6548,9 @@ dependencies = [
  "bv",
  "bytemuck",
  "cc",
- "console_error_panic_hook",
- "console_log",
  "curve25519-dalek",
- "getrandom 0.2.10",
+ "getrandom 0.2.15",
  "itertools",
- "js-sys",
  "lazy_static",
  "libc",
  "libsecp256k1",
@@ -6592,7 +6577,6 @@ dependencies = [
  "static_assertions",
  "thiserror",
  "tiny-bip39",
- "wasm-bindgen",
  "zeroize",
 ]
 
@@ -7040,7 +7024,6 @@ dependencies = [
  "thiserror",
  "tiny-bip39",
  "uriparse",
- "wasm-bindgen",
 ]
 
 [[package]]
