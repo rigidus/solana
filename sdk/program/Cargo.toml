@@ -46,7 +46,7 @@ thiserror = { workspace = true }
 # hashbrown dependency as optional.
 [target.'cfg(target_os = "solana")'.dependencies]
 # getrandom = { workspace = true, features = ["custom"] }
-getrandom = { path = "/home/rigidus/src/getrandom", features = ["js"] }
+getrandom = { path = "../../../getrandom", features = ["js"] }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]
 ark-bn254 = { workspace = true }
@@ -62,7 +62,7 @@ libsecp256k1 = { workspace = true }
 light-poseidon = { workspace = true }
 num-bigint = { workspace = true }
 rand = { workspace = true }
-tiny-bip39 = { workspace = true }
+#tiny-bip39 = { workspace = true }
 # wasm-bindgen = { workspace = true }
 zeroize = { workspace = true, features = ["default", "zeroize_derive"] }
 
@@ -72,10 +72,10 @@ solana-logger = { workspace = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 # console_error_panic_hook = { workspace = true }
-# console_error_panic_hook = { path = "/home/rigidus/src/console_error_panic_hook" }
+# console_error_panic_hook = { path = "../console_error_panic_hook" }
 # console_log = { workspace = true }
 # getrandom = { workspace = true, features = ["js", "wasm-bindgen"] }
-# getrandom = { path = "/home/rigidus/src/getrandom", features = ["js"] }
+# getrandom = { path = "../getrandom", features = ["js"] }
 # js-sys = { workspace = true }
 
 [target.'cfg(not(target_pointer_width = "64"))'.dependencies]
